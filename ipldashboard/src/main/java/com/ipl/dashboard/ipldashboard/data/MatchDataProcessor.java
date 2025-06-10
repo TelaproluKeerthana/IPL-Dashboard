@@ -1,6 +1,5 @@
 package com.ipl.dashboard.ipldashboard.data;
 
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -9,19 +8,22 @@ import org.slf4j.LoggerFactory;
 
 import org.springframework.batch.item.ItemProcessor;
 
-import com.ipl.dashboard.model.Match;
+import com.ipl.dashboard.ipldashboard.model.Match;
 
 public class MatchDataProcessor implements ItemProcessor<MatchInput, Match> {
 
   private static final Logger log = LoggerFactory.getLogger(MatchDataProcessor.class);
-
+  private static final DateTimeFormatter ISO = DateTimeFormatter.ISO_DATE;
+  
   @Override
   public Match process(final MatchInput matchInput) throws Exception{
     Match match = new Match();
-    match.setId(matchInput.getId());
+    match.setId(Long.parseLong(matchInput.getId()));
+    match.setDate(LocalDate.parse(matchInput.getDate(), ISO));
     match.setCity(matchInput.getCity());
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-    match.setDate(LocalDate.parse(matchInput.getDate().toString(), formatter));
+    
+  
+    
     match.setPlayerOfMatch(matchInput.getPlayer_of_match());
     match.setVenue(matchInput.getVenue());
 
@@ -42,10 +44,16 @@ public class MatchDataProcessor implements ItemProcessor<MatchInput, Match> {
 
     match.setTossWinner(matchInput.getToss_winner());
     match.setTossDecision(matchInput.getToss_decision());
+    
+    // Add the missing matchWinner field
+    match.setMatchWinner(matchInput.getWinner());
+    
     match.setResult(matchInput.getResult());
     match.setResultMargin(matchInput.getResult_margin());
     match.setUmpire1(matchInput.getUmpire1());
     match.setUmpire2(matchInput.getUmpire2());
+
+    log.info("Processing match: {} vs {} on {}", firstInningsTeam, secondInningsTeam, matchInput.getDate());
 
     return match;
 

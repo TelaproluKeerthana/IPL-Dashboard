@@ -3,10 +3,10 @@ package com.ipl.dashboard.ipldashboard.data;
 import java.time.LocalDate;
 
 public class MatchInput {
-    private long id;
+    private String id;
     private String season;
     private String city;
-    private LocalDate date;
+    private String date;
     private String match_type;
     private String player_of_match;
     private String venue;
@@ -23,10 +23,10 @@ public class MatchInput {
     private String method;
     private String umpire1;
     private String umpire2;
-    public long getId() {
+    public String getId() {
         return id;
     }
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
     public String getSeason() {
@@ -41,10 +41,10 @@ public class MatchInput {
     public void setCity(String city) {
         this.city = city;
     }
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
     public String getMatch_type() {

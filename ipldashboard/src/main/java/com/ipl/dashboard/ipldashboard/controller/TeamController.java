@@ -5,11 +5,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ipl.dashboard.ipldashboard.model.Team;
 import com.ipl.dashboard.ipldashboard.repository.MatchRepository;
 import com.ipl.dashboard.ipldashboard.repository.TeamRepository;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 
 @RestController
+@CrossOrigin
 public class TeamController {
     
     private TeamRepository teamRepository;

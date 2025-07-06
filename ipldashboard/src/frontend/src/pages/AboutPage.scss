@@ -1,0 +1,403 @@
+.AboutPage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+
+    .about-header {
+        text-align: center;
+        margin-bottom: 50px;
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #666;
+            margin: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+
+    .about-content {
+        .project-description {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+            h2 {
+                color: #333;
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+            }
+
+            p {
+                color: #666;
+                line-height: 1.6;
+                margin-bottom: 15px;
+                font-size: 1.1rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .features-section {
+            margin-bottom: 40px;
+
+            h2 {
+                color: #333;
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            .features-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 25px;
+
+                .feature-card {
+                    background: white;
+                    border-radius: 15px;
+                    padding: 25px;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                    text-align: center;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+                    }
+
+                    .feature-icon {
+                        font-size: 3rem;
+                        color: #667eea;
+                        margin-bottom: 20px;
+                    }
+
+                    h3 {
+                        color: #333;
+                        font-size: 1.3rem;
+                        margin-bottom: 15px;
+                    }
+
+                    p {
+                        color: #666;
+                        line-height: 1.5;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .tech-stack {
+            margin-bottom: 40px;
+
+            h2 {
+                color: #333;
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            .tech-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+
+                .tech-card {
+                    background: white;
+                    border-radius: 15px;
+                    padding: 25px;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                    text-align: center;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+                    }
+
+                    .tech-icon {
+                        font-size: 3rem;
+                        margin-bottom: 15px;
+                    }
+
+                    .tech-name {
+                        color: #333;
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .project-info {
+            margin-bottom: 40px;
+
+            h2 {
+                color: #333;
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            .info-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 25px;
+
+                .info-card {
+                    background: white;
+                    border-radius: 15px;
+                    padding: 25px;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+                    h3 {
+                        color: #333;
+                        font-size: 1.4rem;
+                        margin-bottom: 20px;
+                        text-align: center;
+                    }
+
+                    ul {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+
+                        li {
+                            color: #666;
+                            padding: 8px 0;
+                            border-bottom: 1px solid #f0f0f0;
+                            position: relative;
+                            padding-left: 20px;
+
+                            &:before {
+                                content: '•';
+                                color: #667eea;
+                                font-weight: bold;
+                                position: absolute;
+                                left: 0;
+                            }
+
+                            &:last-child {
+                                border-bottom: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+
+            h2 {
+                color: #333;
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+            }
+
+            p {
+                color: #666;
+                line-height: 1.6;
+                margin-bottom: 25px;
+                font-size: 1.1rem;
+            }
+
+            .contact-links {
+                .github-link {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 10px;
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    color: white;
+                    padding: 12px 25px;
+                    border-radius: 25px;
+                    text-decoration: none;
+                    font-weight: 600;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        transform: translateY(-2px);
+                        box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+                    }
+
+                    svg {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .AboutPage {
+        padding: 15px;
+
+        .about-header {
+            margin-bottom: 30px;
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        .about-content {
+            .project-description {
+                padding: 20px;
+                margin-bottom: 30px;
+
+                h2 {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+
+            .features-section {
+                margin-bottom: 30px;
+
+                h2 {
+                    font-size: 1.5rem;
+                }
+
+                .features-grid {
+                    grid-template-columns: 1fr;
+                    gap: 20px;
+
+                    .feature-card {
+                        padding: 20px;
+
+                        .feature-icon {
+                            font-size: 2.5rem;
+                        }
+
+                        h3 {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+
+            .tech-stack {
+                margin-bottom: 30px;
+
+                h2 {
+                    font-size: 1.5rem;
+                }
+
+                .tech-grid {
+                    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                    gap: 15px;
+
+                    .tech-card {
+                        padding: 20px;
+
+                        .tech-icon {
+                            font-size: 2.5rem;
+                        }
+
+                        .tech-name {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .project-info {
+                margin-bottom: 30px;
+
+                h2 {
+                    font-size: 1.5rem;
+                }
+
+                .info-grid {
+                    grid-template-columns: 1fr;
+                    gap: 20px;
+
+                    .info-card {
+                        padding: 20px;
+
+                        h3 {
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+
+            .contact-section {
+                padding: 20px;
+
+                h2 {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .AboutPage {
+        .about-header {
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        .about-content {
+            .features-grid {
+                .feature-card {
+                    padding: 15px;
+
+                    .feature-icon {
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            .tech-grid {
+                grid-template-columns: repeat(2, 1fr);
+
+                .tech-card {
+                    padding: 15px;
+
+                    .tech-icon {
+                        font-size: 2rem;
+                    }
+
+                    .tech-name {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+} 

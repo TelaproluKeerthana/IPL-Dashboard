@@ -1,0 +1,256 @@
+.StatsPage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+
+    .stats-header {
+        text-align: center;
+        margin-bottom: 40px;
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #666;
+            margin: 0;
+        }
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-bottom: 40px;
+
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            }
+
+            .card-icon {
+                font-size: 2.5rem;
+                width: 60px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: rgba(102, 126, 234, 0.1);
+            }
+
+            .card-content {
+                h3 {
+                    margin: 0 0 5px 0;
+                    font-size: 1rem;
+                    color: #666;
+                    font-weight: 500;
+                }
+
+                .card-value {
+                    margin: 0;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: #333;
+                }
+            }
+        }
+    }
+
+    .charts-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+
+        .chart-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+            h2 {
+                margin: 0 0 20px 0;
+                color: #333;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .team-comparison {
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+        h2 {
+            margin: 0 0 20px 0;
+            color: #333;
+            font-size: 1.5rem;
+        }
+
+        .table-container {
+            overflow-x: auto;
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 10px;
+
+                th, td {
+                    padding: 12px 15px;
+                    text-align: left;
+                    border-bottom: 1px solid #eee;
+                }
+
+                th {
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    color: white;
+                    font-weight: 600;
+                    position: sticky;
+                    top: 0;
+                }
+
+                tr:hover {
+                    background: rgba(102, 126, 234, 0.05);
+                }
+
+                td {
+                    color: #333;
+                }
+            }
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+    .StatsPage {
+        .charts-container {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .StatsPage {
+        padding: 15px;
+
+        .stats-header {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        .stats-grid {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+
+            .stat-card {
+                padding: 20px;
+                gap: 15px;
+
+                .card-icon {
+                    font-size: 2rem;
+                    width: 50px;
+                    height: 50px;
+                }
+
+                .card-content {
+                    .card-value {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        .charts-container {
+            gap: 20px;
+
+            .chart-section {
+                padding: 20px;
+
+                h2 {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        .team-comparison {
+            padding: 20px;
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            .table-container {
+                table {
+                    th, td {
+                        padding: 8px 10px;
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .StatsPage {
+        .stats-grid {
+            grid-template-columns: 1fr;
+
+            .stat-card {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+
+                .card-content {
+                    .card-value {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+
+        .charts-container {
+            .chart-section {
+                padding: 15px;
+            }
+        }
+
+        .team-comparison {
+            padding: 15px;
+
+            .table-container {
+                table {
+                    th, td {
+                        padding: 6px 8px;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+} 

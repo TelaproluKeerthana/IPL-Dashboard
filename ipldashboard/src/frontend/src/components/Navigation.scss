@@ -1,0 +1,156 @@
+.navigation {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+
+        .nav-logo {
+            text-decoration: none;
+            
+            .logo-text {
+                color: white;
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .nav-link {
+                text-decoration: none;
+                color: rgba(255, 255, 255, 0.9);
+                transition: all 0.3s ease;
+
+                &.active {
+                    color: white;
+                    font-weight: 600;
+                }
+
+                .nav-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    padding: 10px 15px;
+                    border-radius: 25px;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        background: rgba(255, 255, 255, 0.1);
+                        transform: translateY(-2px);
+                    }
+
+                    .nav-icon {
+                        font-size: 1.1rem;
+                    }
+
+                    .nav-label {
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+
+            span {
+                width: 25px;
+                height: 3px;
+                background: white;
+                border-radius: 2px;
+                transition: all 0.3s ease;
+            }
+
+            &.active {
+                span:nth-child(1) {
+                    transform: rotate(45deg) translate(6px, 6px);
+                }
+                span:nth-child(2) {
+                    opacity: 0;
+                }
+                span:nth-child(3) {
+                    transform: rotate(-45deg) translate(6px, -6px);
+                }
+            }
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .navigation {
+        .nav-container {
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-top: 40px;
+                transition: left 0.3s ease;
+                gap: 0;
+
+                &.active {
+                    left: 0;
+                }
+
+                .nav-link {
+                    width: 100%;
+                    
+                    .nav-item {
+                        width: 100%;
+                        justify-content: center;
+                        padding: 20px;
+                        border-radius: 0;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+                        &:hover {
+                            background: rgba(255, 255, 255, 0.1);
+                            transform: none;
+                        }
+                    }
+                }
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .navigation {
+        .nav-container {
+            padding: 0 15px;
+            height: 60px;
+
+            .nav-logo {
+                .logo-text {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+} 

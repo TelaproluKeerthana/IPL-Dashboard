@@ -1,7 +1,125 @@
 .TeamTile {
-    height: 170px;
-    text-align: center;
-    border: 1px solid white;
-    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
 
+    &:hover {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .team-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        padding: 30px 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            transition: left 0.3s ease;
+        }
+
+        &:hover::before {
+            left: 0;
+        }
+
+        .team-icon {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .team-name {
+            font-size: 1.3rem;
+            color: #333;
+            margin: 0;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        .team-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+
+            span {
+                color: white;
+                font-weight: 600;
+                font-size: 1.1rem;
+            }
+        }
+
+        &:hover .team-overlay {
+            opacity: 1;
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .TeamTile {
+        .team-link {
+            padding: 25px 15px;
+
+            .team-icon {
+                font-size: 2.5rem;
+                margin-bottom: 12px;
+            }
+
+            .team-name {
+                font-size: 1.1rem;
+            }
+
+            .team-overlay {
+                span {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .TeamTile {
+        .team-link {
+            padding: 20px 10px;
+
+            .team-icon {
+                font-size: 2rem;
+                margin-bottom: 10px;
+            }
+
+            .team-name {
+                font-size: 1rem;
+            }
+
+            .team-overlay {
+                span {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
 }

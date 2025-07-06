@@ -1,36 +1,144 @@
 .TeamPage {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 
     .team-name-section {
-        grid-column: span 3;
-        justify-self: start;
-        align-self: end;
-    }
+        text-align: center;
+        margin-bottom: 30px;
 
-    .team-name {
-        font-size: 4rem;
-        margin-bottom: 20px;
+        .team-name {
+            font-size: 2.5rem;
+            color: #333;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+        }
     }
 
     .win-loss-section {
-        justify-self: center;
-        padding: 40px;
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         text-align: center;
+
+        h3 {
+            margin: 0 0 20px 0;
+            color: #333;
+            font-size: 1.3rem;
+        }
+
+        .recharts-wrapper {
+            max-width: 300px;
+            margin: 0 auto;
+        }
     }
 
     .match-detail-section {
-        grid-column: span 4;
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        margin-bottom: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+        h3 {
+            margin: 0 0 20px 0;
+            color: #333;
+            font-size: 1.3rem;
+        }
     }
 
     .more-link {
-        align-self: center;
-        justify-self: center;
-        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 30px;
 
+        a {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+            }
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .TeamPage {
+        padding: 15px;
+
+        .team-name-section {
+            margin-bottom: 25px;
+
+            .team-name {
+                font-size: 2rem;
+            }
+        }
+
+        .win-loss-section {
+            padding: 20px;
+            margin-bottom: 25px;
+
+            h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        .match-detail-section {
+            padding: 20px;
+            margin-bottom: 15px;
+
+            h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        .more-link {
+            margin-top: 25px;
+
+            a {
+                padding: 10px 25px;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .TeamPage {
+        .team-name-section {
+            .team-name {
+                font-size: 1.8rem;
+            }
+        }
+
+        .win-loss-section {
+            padding: 15px;
+
+            h3 {
+                font-size: 1.1rem;
+            }
+        }
+
+        .match-detail-section {
+            padding: 15px;
+
+            h3 {
+                font-size: 1.1rem;
+            }
+        }
     }
 }

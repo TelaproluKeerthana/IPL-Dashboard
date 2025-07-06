@@ -1,7 +1,8 @@
 .HomePage {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    width: 100vw;
+    max-width: none;
+    margin: 0;
+    padding: 20px 0;
 
     .header-section {
         text-align: center;
@@ -169,5 +170,16 @@
         .team-grid {
             grid-template-columns: 1fr;
         }
+    }
+}
+
+@media (min-width: 1600px) {
+    .HomePage {
+        max-width: 1600px;
+    }
+}
+@media (min-width: 2000px) {
+    .HomePage {
+        max-width: 1800px;
     }
 }

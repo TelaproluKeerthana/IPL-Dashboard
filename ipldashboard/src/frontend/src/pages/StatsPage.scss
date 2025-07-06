@@ -1,7 +1,9 @@
 .StatsPage {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    width: 100vw;
+    max-width: none;
+    margin: 0;
+    padding: 20px 0;
+    box-sizing: border-box;
 
     .stats-header {
         text-align: center;

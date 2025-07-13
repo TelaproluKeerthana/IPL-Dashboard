@@ -1,6 +1,5 @@
 .AboutPage {
-    width: 100vw;
-    max-width: none;
+    width: 100%;
     margin: 0;
     padding: 20px 0;
     box-sizing: border-box;
@@ -250,9 +249,15 @@
 }
 
 // Responsive Design
+@media (max-width: 1024px) {
+    .AboutPage {
+        padding: 15px 0;
+    }
+}
+
 @media (max-width: 768px) {
     .AboutPage {
-        padding: 15px;
+        padding: 15px 0;
 
         .about-header {
             margin-bottom: 30px;
@@ -368,6 +373,8 @@
 
 @media (max-width: 480px) {
     .AboutPage {
+        padding: 10px 0;
+
         .about-header {
             h1 {
                 font-size: 1.8rem;

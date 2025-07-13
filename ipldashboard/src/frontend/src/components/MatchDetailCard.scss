@@ -1,19 +1,55 @@
 .MatchDetailCard {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 10px;
-    margin-bottom: 20px;;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px var(--shadow-light);
+    transition: all 0.3s ease;
 
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 40px var(--shadow-medium);
+    }
 
     .match-date, .match-venue, .match-result {
         margin-top: 10px;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
     }
+
     .additional-detail {
         text-align: right;
+        
         & > p {
-            margin-bottom: 20px;;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            font-weight: 500;
         }
-
     }
+}
 
+// Responsive Design
+@media (max-width: 768px) {
+    .MatchDetailCard {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 15px;
+
+        .additional-detail {
+            text-align: left;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .MatchDetailCard {
+        padding: 12px;
+        gap: 12px;
+
+        .match-date, .match-venue, .match-result {
+            font-size: 0.8rem;
+        }
+    }
 }

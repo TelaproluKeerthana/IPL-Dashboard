@@ -1,9 +1,67 @@
 .YearSelector {
     text-align: right;
     list-style-type: none;
+    padding: 0;
+    margin: 0;
+
     li {
         margin-top: 10px;
         margin-bottom: 10px;
-    }
 
+        a {
+            display: inline-block;
+            padding: 8px 16px;
+            background: var(--card-bg);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px var(--shadow-light);
+
+            &:hover {
+                background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-secondary) 100%);
+                color: white;
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            }
+
+            &.active {
+                background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-secondary) 100%);
+                color: white;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .YearSelector {
+        text-align: center;
+
+        li {
+            margin-top: 8px;
+            margin-bottom: 8px;
+
+            a {
+                padding: 6px 12px;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .YearSelector {
+        li {
+            margin-top: 6px;
+            margin-bottom: 6px;
+
+            a {
+                padding: 5px 10px;
+                font-size: 0.8rem;
+            }
+        }
+    }
 }

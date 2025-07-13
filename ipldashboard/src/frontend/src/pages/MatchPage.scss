@@ -1,7 +1,9 @@
 .MatchPage {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-column-gap: 20px;
+    padding: 20px 0;
 
     .year-selector {
         justify-self: end;
@@ -10,5 +12,37 @@
 
     .page-heading {
         margin: 20px auto;
+    }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+    .MatchPage {
+        padding: 15px 0;
+        grid-column-gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .MatchPage {
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+        padding: 15px 0;
+
+        .year-selector {
+            justify-self: center;
+            padding: 15px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .MatchPage {
+        padding: 10px 0;
+        grid-row-gap: 15px;
+
+        .year-selector {
+            padding: 10px;
+        }
     }
 }

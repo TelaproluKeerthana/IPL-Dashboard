@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaHome, FaTrophy, FaChartBar, FaInfoCircle } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import ThemeToggle from './ThemeToggle';
 import './Navigation.scss';
 
 export const Navigation = () => {
@@ -51,13 +52,16 @@ export const Navigation = () => {
                     ))}
                 </div>
 
-                <div 
-                    className={`hamburger ${isMenuOpen ? 'active' : ''}`}
-                    onClick={toggleMenu}
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div className="nav-controls">
+                    <ThemeToggle />
+                    <div 
+                        className={`hamburger ${isMenuOpen ? 'active' : ''}`}
+                        onClick={toggleMenu}
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </div>
         </nav>

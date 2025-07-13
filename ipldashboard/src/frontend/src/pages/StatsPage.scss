@@ -1,6 +1,5 @@
 .StatsPage {
-    width: 100vw;
-    max-width: none;
+    width: 100%;
     margin: 0;
     padding: 20px 0;
     box-sizing: border-box;
@@ -145,6 +144,8 @@
 // Responsive Design
 @media (max-width: 1024px) {
     .StatsPage {
+        padding: 15px 0;
+
         .charts-container {
             grid-template-columns: 1fr;
         }
@@ -153,7 +154,7 @@
 
 @media (max-width: 768px) {
     .StatsPage {
-        padding: 15px;
+        padding: 15px 0;
 
         .stats-header {
             h1 {
@@ -220,6 +221,8 @@
 
 @media (max-width: 480px) {
     .StatsPage {
+        padding: 10px 0;
+
         .stats-grid {
             grid-template-columns: 1fr;
 

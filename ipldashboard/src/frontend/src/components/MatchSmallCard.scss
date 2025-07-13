@@ -1,9 +1,72 @@
 .MatchSmallCard {
-    padding: 10px;
-    margin-bottom: 20px;;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--accent-color);
 
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px var(--shadow-medium);
+    }
 
     .match-result {
         margin-top: 10px;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    h3 {
+        color: var(--text-primary);
+        margin: 0 0 8px 0;
+        font-size: 1.1rem;
+    }
+
+    p {
+        color: var(--text-secondary);
+        margin: 5px 0;
+        font-size: 0.9rem;
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .MatchSmallCard {
+        padding: 12px;
+        margin-bottom: 12px;
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+
+        .match-result {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .MatchSmallCard {
+        padding: 10px;
+        margin-bottom: 10px;
+
+        h3 {
+            font-size: 0.9rem;
+        }
+
+        p {
+            font-size: 0.75rem;
+        }
+
+        .match-result {
+            font-size: 0.75rem;
+        }
     }
 }

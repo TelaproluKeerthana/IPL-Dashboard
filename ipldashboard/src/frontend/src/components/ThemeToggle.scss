@@ -1,0 +1,63 @@
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: var(--bg-hover);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--accent-color);
+  }
+
+  .toggle-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+
+    svg {
+      transition: all 0.3s ease;
+    }
+  }
+
+  &:hover .toggle-icon {
+    transform: rotate(15deg);
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .theme-toggle {
+    padding: 6px;
+
+    .toggle-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-toggle {
+    padding: 5px;
+
+    .toggle-icon svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+} 

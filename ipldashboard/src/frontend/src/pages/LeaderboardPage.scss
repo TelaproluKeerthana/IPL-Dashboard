@@ -31,37 +31,38 @@
         gap: 15px;
         margin-bottom: 30px;
         padding: 20px;
-        background: white;
+        background: var(--card-bg);
         border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 20px var(--shadow-light);
 
         label {
             font-weight: 600;
-            color: #333;
+            color: var(--text-primary);
         }
 
         .sort-select {
             padding: 10px 15px;
-            border: 2px solid #e1e5e9;
+            border: 2px solid var(--border-color);
             border-radius: 8px;
-            background: white;
+            background: var(--card-bg);
+            color: var(--text-primary);
             font-size: 1rem;
             cursor: pointer;
             transition: all 0.3s ease;
 
             &:focus {
                 outline: none;
-                border-color: #667eea;
+                border-color: var(--accent-color);
                 box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
             }
         }
     }
 
     .leaderboard-table {
-        background: white;
+        background: var(--card-bg);
         border-radius: 15px;
         overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 10px 30px var(--shadow-light);
         margin-bottom: 30px;
 
         .table-header {
@@ -83,12 +84,12 @@
             grid-template-columns: 80px 2fr 1fr 1fr 1fr 1fr;
             padding: 20px;
             gap: 15px;
-            border-bottom: 1px solid #f0f0f0;
+            border-bottom: 1px solid var(--border-color);
             transition: all 0.3s ease;
             cursor: pointer;
 
             &:hover {
-                background: rgba(102, 126, 234, 0.05);
+                background: var(--bg-hover);
             }
 
             &.top-three {
@@ -108,12 +109,12 @@
                     width: 40px;
                     height: 40px;
                     border-radius: 50%;
-                    background: #f8f9fa;
+                    background: var(--bg-secondary);
                     font-weight: bold;
                     font-size: 1.1rem;
 
                     .rank-number {
-                        color: #333;
+                        color: var(--text-primary);
                     }
                 }
             }
@@ -122,7 +123,7 @@
                 .team-info {
                     h3 {
                         margin: 0 0 5px 0;
-                        color: #333;
+                        color: var(--text-primary);
                         font-size: 1.2rem;
                     }
 
@@ -167,14 +168,14 @@
 
     .leaderboard-summary {
         .summary-card {
-            background: white;
+            background: var(--card-bg);
             border-radius: 15px;
             padding: 25px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px var(--shadow-light);
 
             h3 {
                 margin: 0 0 20px 0;
-                color: #333;
+                color: var(--text-primary);
                 font-size: 1.5rem;
                 text-align: center;
             }
@@ -193,12 +194,12 @@
                     border-radius: 10px;
 
                     .stat-label {
-                        color: #666;
+                        color: var(--text-secondary);
                         font-weight: 500;
                     }
 
                     .stat-value {
-                        color: #333;
+                        color: var(--text-primary);
                         font-weight: bold;
                         font-size: 1.2rem;
                     }

@@ -16,9 +16,6 @@ export const TeamTile = ({ teamName }) => {
                     <FaTrophy />
                 </div>
                 <h2 className="team-name">{teamName}</h2>
-                <div className="team-overlay">
-                    <span>View Details</span>
-                </div>
             </Link>
         </motion.div>
     );

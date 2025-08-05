@@ -29,20 +29,20 @@
 
     .about-content {
         .project-description {
-            background: white;
+            background: var(--card-bg);
             border-radius: 15px;
             padding: 30px;
             margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px var(--shadow-light);
 
             h2 {
-                color: #333;
+                color: var(--text-primary);
                 font-size: 1.8rem;
                 margin-bottom: 20px;
             }
 
             p {
-                color: #666;
+                color: var(--text-secondary);
                 line-height: 1.6;
                 margin-bottom: 15px;
                 font-size: 1.1rem;
@@ -57,7 +57,7 @@
             margin-bottom: 40px;
 
             h2 {
-                color: #333;
+                color: var(--text-primary);
                 font-size: 1.8rem;
                 margin-bottom: 30px;
                 text-align: center;
@@ -69,32 +69,32 @@
                 gap: 25px;
 
                 .feature-card {
-                    background: white;
+                    background: var(--card-bg);
                     border-radius: 15px;
                     padding: 25px;
-                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                    box-shadow: 0 10px 30px var(--shadow-light);
                     text-align: center;
                     transition: all 0.3s ease;
 
                     &:hover {
                         transform: translateY(-5px);
-                        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+                        box-shadow: 0 15px 40px var(--shadow-medium);
                     }
 
                     .feature-icon {
                         font-size: 3rem;
-                        color: #667eea;
+                        color: var(--accent-color);
                         margin-bottom: 20px;
                     }
 
                     h3 {
-                        color: #333;
+                        color: var(--text-primary);
                         font-size: 1.3rem;
                         margin-bottom: 15px;
                     }
 
                     p {
-                        color: #666;
+                        color: var(--text-secondary);
                         line-height: 1.5;
                         margin: 0;
                     }
@@ -106,7 +106,7 @@
             margin-bottom: 40px;
 
             h2 {
-                color: #333;
+                color: var(--text-primary);
                 font-size: 1.8rem;
                 margin-bottom: 30px;
                 text-align: center;
@@ -118,16 +118,16 @@
                 gap: 20px;
 
                 .tech-card {
-                    background: white;
+                    background: var(--card-bg);
                     border-radius: 15px;
                     padding: 25px;
-                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                    box-shadow: 0 10px 30px var(--shadow-light);
                     text-align: center;
                     transition: all 0.3s ease;
 
                     &:hover {
                         transform: translateY(-5px);
-                        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+                        box-shadow: 0 15px 40px var(--shadow-medium);
                     }
 
                     .tech-icon {
@@ -136,7 +136,7 @@
                     }
 
                     .tech-name {
-                        color: #333;
+                        color: var(--text-primary);
                         font-size: 1.2rem;
                         font-weight: 600;
                     }
@@ -148,7 +148,7 @@
             margin-bottom: 40px;
 
             h2 {
-                color: #333;
+                color: var(--text-primary);
                 font-size: 1.8rem;
                 margin-bottom: 30px;
                 text-align: center;
@@ -160,13 +160,13 @@
                 gap: 25px;
 
                 .info-card {
-                    background: white;
+                    background: var(--card-bg);
                     border-radius: 15px;
                     padding: 25px;
-                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                    box-shadow: 0 10px 30px var(--shadow-light);
 
                     h3 {
-                        color: #333;
+                        color: var(--text-primary);
                         font-size: 1.4rem;
                         margin-bottom: 20px;
                         text-align: center;
@@ -178,15 +178,15 @@
                         margin: 0;
 
                         li {
-                            color: #666;
+                            color: var(--text-secondary);
                             padding: 8px 0;
-                            border-bottom: 1px solid #f0f0f0;
+                            border-bottom: 1px solid var(--border-color);
                             position: relative;
                             padding-left: 20px;
 
                             &:before {
                                 content: '•';
-                                color: #667eea;
+                                color: var(--accent-color);
                                 font-weight: bold;
                                 position: absolute;
                                 left: 0;
@@ -202,20 +202,20 @@
         }
 
         .contact-section {
-            background: white;
+            background: var(--card-bg);
             border-radius: 15px;
             padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px var(--shadow-light);
             text-align: center;
 
             h2 {
-                color: #333;
+                color: var(--text-primary);
                 font-size: 1.8rem;
                 margin-bottom: 20px;
             }
 
             p {
-                color: #666;
+                color: var(--text-secondary);
                 line-height: 1.6;
                 margin-bottom: 25px;
                 font-size: 1.1rem;

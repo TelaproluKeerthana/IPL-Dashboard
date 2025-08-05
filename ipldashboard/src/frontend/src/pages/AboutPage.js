@@ -174,7 +174,7 @@ export const AboutPage = () => {
                     </p>
                     <div className="contact-links">
                         <a 
-                            href="https://github.com" 
+                            href="https://github.com/TelaproluKeerthana/IPL-Dashboard" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="github-link"

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import { FaTrophy, FaChartLine, FaUsers, FaCalendarAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Skeleton from 'react-loading-skeleton';
@@ -9,7 +9,6 @@ import './StatsPage.scss';
 export const StatsPage = () => {
     const [teams, setTeams] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [selectedYear, setSelectedYear] = useState(2020);
 
     useEffect(() => {
         const fetchTeams = async () => {

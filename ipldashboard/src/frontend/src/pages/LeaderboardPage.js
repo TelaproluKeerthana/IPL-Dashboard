@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaTrophy, FaMedal, FaCrown, FaArrowUp, FaArrowDown } from 'react-icons/fa';
+import { FaTrophy, FaMedal, FaCrown } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';

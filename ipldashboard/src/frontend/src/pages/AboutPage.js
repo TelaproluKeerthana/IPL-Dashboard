@@ -30,7 +30,7 @@ export const AboutPage = () => {
     const techStack = [
         { name: 'React', icon: <FaReact />, color: '#61DAFB' },
         { name: 'Java Spring Boot', icon: <FaJava />, color: '#ED8B00' },
-        { name: 'PostgreSQL', icon: <FaDatabase />, color: '#336791' },
+        { name: 'HSQLDB', icon: <FaDatabase />, color: '#336791' },
         { name: 'Recharts', icon: <FaChartBar />, color: '#FF6B6B' }
     ];
 
@@ -143,7 +143,7 @@ export const AboutPage = () => {
                             <ul>
                                 <li>Spring Boot framework</li>
                                 <li>RESTful API design</li>
-                                <li>PostgreSQL database</li>
+                                <li>HSQLDB database</li>
                                 <li>JPA/Hibernate ORM</li>
                                 <li>Batch processing for data</li>
                             </ul>

@@ -324,5 +324,4 @@ This project is licensed under the MIT License.
 ## 🔗 Links
 
 * **Repository**: [https://github.com/TelaproluKeerthana/IPL-Dashboard](https://github.com/TelaproluKeerthana/IPL-Dashboard)
-* **Live Demo**: [Coming Soon]
-* **Documentation**: [Coming Soon]
+* **Live Demo**: http://ipl-dashboard-env.eba-qmv3zmji.us-east-1.elasticbeanstalk.com/
